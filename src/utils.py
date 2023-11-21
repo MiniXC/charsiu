@@ -300,7 +300,8 @@ def forced_align(cost, phone_ids):
         A list of IDs for aligned phones.
 
     """
-    
+
+    print(-cost[:,phone_ids], phone_ids)
     D,align = dtw(C=-cost[:,phone_ids],
                   step_sizes_sigma=np.array([[1, 1], [1, 0]]))
 
